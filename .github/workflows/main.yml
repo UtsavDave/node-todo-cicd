@@ -1,0 +1,10 @@
+name: cicd
+on:
+  push:
+    branches: [ master ]
+jobs:
+  run_script:
+    runs-on: ['self-hosted','Linux','X64','utsav-cicd\']
+    steps:
+      - name: run a script
+        run: cd /home/ubuntu/Project/actions-runner/scripts && bash cicd.sh
